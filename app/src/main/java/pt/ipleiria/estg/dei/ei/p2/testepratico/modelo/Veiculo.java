@@ -2,7 +2,7 @@ package pt.ipleiria.estg.dei.ei.p2.testepratico.modelo;
 
 public class Veiculo
 {
-    private long nPassageiros = 0;
+    private long nPassageiros;
     private long maxPassageiros;
 
 
