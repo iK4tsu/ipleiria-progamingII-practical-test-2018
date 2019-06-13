@@ -2,14 +2,14 @@ package pt.ipleiria.estg.dei.ei.p2.testepratico.modelo;
 
 public class Veiculo
 {
-    private long nPassageiros;
+    private long nPassageiros = 0;
     private long maxPassageiros;
 
 
     public Veiculo(long nPassageiros, long maxPassageiros)
     {
-        this.nPassageiros = nPassageiros;
         this.maxPassageiros = maxPassageiros;
+        addPassageiros(nPassageiros);
     }
 
 
@@ -26,10 +26,17 @@ public class Veiculo
 
     public void addPassageiros(long numero)
     {
-        if (numero < 0 || numero + this.nPassageiros > this.maxPassageiros)
+        if (numero < 0)
         {
             return;
         }
+
+        if (numero + this.nPassageiros > this.maxPassageiros)
+        {
+            this.nPassageiros = this.maxPassageiros;
+            return;
+        }
+
         this.nPassageiros += numero;
     }
 

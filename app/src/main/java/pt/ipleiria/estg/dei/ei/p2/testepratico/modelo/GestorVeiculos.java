@@ -20,7 +20,7 @@ public enum GestorVeiculos
         Reboque<Barco> girassol = new Reboque<>("SD-34-55", 1);
         Reboque<VeiculoTerrestre> golpe = new Reboque<>("FJ-76-99", 1);
         Barco trindade = new Barco(1925, 258, 854);
-        Automovel bruto = new Automovel("GT-29-00", 2, 2);
+        Automovel bruto = new Automovel("GT-29-00", 3, 2);
 
         girassol.associar(trindade);
         golpe.associar(bruto);
